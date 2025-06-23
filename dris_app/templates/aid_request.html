@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<video autoplay muted loop class="video-bg">
+    <source src="{% static 'backgrounds/aidreq.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
+<div class="video-overlay"></div>
+
+<style>
+    .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    .video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .container {
+        top: 15%;
+        left: 5%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 30px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    label, input, textarea {
+        color: black !important;
+    }
+    h1 {
+        color: black !important;
+    }
+</style>
+
+
+<div class="container">
+    <h1 class="mb-4">Submit Aid Request</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="mb-3 row">
+            <label for="aid_type" class="col-sm-2 col-form-label fw-semibold">Aid Type:</label>
+            <div class="col-sm-10">
+                <input type="text" id="aid_type" name="aid_type" class="form-control" placeholder="Enter aid type" required />
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="description" class="col-sm-2 col-form-label fw-semibold">Description:</label>
+            <div class="col-sm-10">
+                <textarea id="description" name="description" rows="6" class="form-control" placeholder="Provide detailed description..." required></textarea>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="{% url 'citizen_home' %}" class="btn btn-outline-secondary">← Back</a>
+            <button type="submit" class="btn btn-success px-4">Submit Request</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

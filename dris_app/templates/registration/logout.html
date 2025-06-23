@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" action="{% url 'logout' %}">
+  {% csrf_token %}
+  <p>Logging out...</p>
+  <button type="submit" class="btn btn-danger d-none">Logout</button>
+</form>
+<script>
+  // Auto-submit the form when page loads
+  document.forms[0].submit();
+</script>
+{% endblock %}
