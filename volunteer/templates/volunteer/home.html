@@ -5,29 +5,53 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
+            width: 100%;
+            max-width: 600px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
         h2 {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .btn-clean {
+            background-color: white;
+            border: none;
+            border-radius: 30px;
             font-weight: 600;
+            padding: 0.75rem 1.2rem;
+            font-size: 1rem;
+            width: 100%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease-in-out;
+            color: #333;
         }
 
-        .btn {
-            border-radius: 25px;
-            font-weight: 500;
-            transition: 0.3s ease-in-out;
-        }
-
-        .btn:hover {
+        .btn-clean:hover {
             transform: scale(1.03);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            background-color: #f8f9fa;
+            color: #000;
         }
 
         .list-group-item {
@@ -39,26 +63,24 @@
 </head>
 <body>
 
-    <div class="container mt-5">
-        <div class="card shadow-lg p-5 mx-auto" style="max-width: 600px;">
-            <h2 class="text-center text-danger mb-3">Welcome to the Volunteer Portal</h2>
-            <p class="text-center text-muted">Thank you for offering your help!</p>
+    <div class="card text-center">
+        <h2 class="text-danger mb-2">Welcome to the Volunteer Portal</h2>
+        <p class="text-muted mb-4">Thank you for offering your help!</p>
 
-            <ul class="list-group list-group-flush mt-4">
-                <li class="list-group-item">
-                    <a class="btn btn-outline-primary w-100" href="{% url 'register_skills' %}">Register Skills & Availability</a>
-                </li>
-                <li class="list-group-item">
-                    <a class="btn btn-outline-success w-100" href="{% url 'view_tasks' %}">View Assigned Tasks</a>
-                </li>
-                <li class="list-group-item">
-                    <a class="btn btn-outline-info w-100" href="{% url 'view_shelters' %}">View Shelter Directory</a>
-                </li>
-                <li class="list-group-item">
-                    <a class="btn btn-outline-danger w-100" href="{% url 'volunteer_logout' %}">Logout</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <a class="btn btn-clean" href="{% url 'register_skills' %}">Register Skills & Availability</a>
+            </li>
+            <li class="list-group-item">
+                <a class="btn btn-clean" href="{% url 'view_tasks' %}">View Assigned Tasks</a>
+            </li>
+            <li class="list-group-item">
+                <a class="btn btn-clean" href="{% url 'view_shelters' %}">View Shelter Directory</a>
+            </li>
+            <li class="list-group-item">
+                <a class="btn btn-clean" href="{% url 'volunteer_logout' %}">Logout</a>
+            </li>
+        </ul>
     </div>
 
 </body>
