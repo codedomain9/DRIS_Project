@@ -17,33 +17,33 @@ python manage.py runserver
 
 
 🌐 DRIS-NADMA Website (Citizen)
-User Signup: http://127.0.0.1:8000/signup/
-User Login: http://127.0.0.1:8000/accounts/login/
-Dashboard / Home (Login Required): http://127.0.0.1:8000/
-Disaster Report: http://127.0.0.1:8000/disasters/
-Submit Aid Request: http://127.0.0.1:8000/aid-request/
-My Submissions (Aid Requests): http://127.0.0.1:8000/my-submissions/
-Shelter Directory: http://127.0.0.1:8000/citizen/shelters/
+-User Signup: http://127.0.0.1:8000/signup/
+-User Login: http://127.0.0.1:8000/accounts/login/
+-Dashboard / Home (Login Required): http://127.0.0.1:8000/
+-Disaster Report: http://127.0.0.1:8000/disasters/
+-Submit Aid Request: http://127.0.0.1:8000/aid-request/
+-My Submissions (Aid Requests): http://127.0.0.1:8000/my-submissions/
+-Shelter Directory: http://127.0.0.1:8000/citizen/shelters/
 
 🧑‍🤝‍🧑 DRIS-NADMA Volunteer Portal
-Volunteer Signup: http://127.0.0.1:8000/volunteer/signup/
-Volunteer Login: http://127.0.0.1:8000/volunteer/login/
-Volunteer Home: http://127.0.0.1:8000/volunteer/
-Register Skills & Availability: http://127.0.0.1:8000/volunteer/register/
-Assigned Tasks: http://127.0.0.1:8000/volunteer/tasks/
-Shelter Directory: http://127.0.0.1:8000/volunteer/shelters/
+-Volunteer Signup: http://127.0.0.1:8000/volunteer/signup/
+-Volunteer Login: http://127.0.0.1:8000/volunteer/login/
+-Volunteer Home: http://127.0.0.1:8000/volunteer/
+-Register Skills & Availability: http://127.0.0.1:8000/volunteer/register/
+-Assigned Tasks: http://127.0.0.1:8000/volunteer/tasks/
+-Shelter Directory: http://127.0.0.1:8000/volunteer/shelters/
 
 🔐 DRIS-NADMA Admin Management
-Admin Login: http://127.0.0.1:8000/admin/login/?next=/admin/
-Admin Dashboard: http://127.0.0.1:8000/admin/
+-Admin Login: http://127.0.0.1:8000/admin/login/?next=/admin/
+-Admin Dashboard: http://127.0.0.1:8000/admin/
 
 ✏️ Admin Controls
-Aid Requests: http://127.0.0.1:8000/admin/dris_app/aidrequest/
-Disaster Reports: http://127.0.0.1:8000/admin/dris_app/disasterreport/
-Shelters: http://127.0.0.1:8000/admin/dris_app/shelter/
-Users: http://127.0.0.1:8000/admin/dris_app/user/
-Volunteer Assignments: http://127.0.0.1:8000/admin/volunteer/volunteerassignment/
-Volunteer Skills: http://127.0.0.1:8000/admin/volunteer/volunteerskill/
+-Aid Requests: http://127.0.0.1:8000/admin/dris_app/aidrequest/
+-Disaster Reports: http://127.0.0.1:8000/admin/dris_app/disasterreport/
+-Shelters: http://127.0.0.1:8000/admin/dris_app/shelter/
+-Users: http://127.0.0.1:8000/admin/dris_app/user/
+-Volunteer Assignments: http://127.0.0.1:8000/admin/volunteer/volunteerassignment/
+-Volunteer Skills: http://127.0.0.1:8000/admin/volunteer/volunteerskill/
 
 🧾 Demo Credentials
 Username: 23100598
