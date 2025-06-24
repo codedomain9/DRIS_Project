@@ -21,7 +21,6 @@
             flex: 1;
         }
 
-        /* Make all navbar text white */
         .navbar a,
         .navbar .navbar-brand,
         .navbar .navbar-text {
@@ -47,26 +46,34 @@
             box-shadow: none;
         }
 
-        /* Footer should be transparent with white text */
         footer.bg-transparent {
             background-color: transparent !important;
             color: white;
+        }
+
+        .hotline {
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
 
-
 <header class="bg-danger text-white py-3 mb-0">
-    <div class="container d-flex justify-content-between align-items-center">
-        <img src="{% static 'images/nadma_logo.png' %}" alt="NADMA Logo" height="40">
-        <h5 class="m-0">NADMA</h5>
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex align-items-center">
+            <img src="{% static 'images/nadma_logo.png' %}" alt="NADMA Logo" height="40" class="me-2">
+            <h5 class="m-0">NADMA</h5>
+        </div>
+        <div class="hotline ms-auto text-end">
+            Emergency Hotline: <strong>999</strong>
+        </div>
         {% if not user.is_authenticated %}
-            <a class="nav-link text-white" href="/accounts/login/">Login</a>
+            <a class="nav-link text-white ms-3" href="/accounts/login/">Login</a>
         {% endif %}
     </div>
 </header>
-
 
 {% if user.is_authenticated %}
 <nav class="navbar navbar-expand-lg bg-transparent mt-2">
@@ -95,12 +102,10 @@
 </nav>
 {% endif %}
 
-
 <main class="container my-4">
     {% block content %}
     {% endblock %}
 </main>
-
 
 <footer class="bg-transparent text-center py-3">
     © 2025 NADMA, Lee Kei Kar, 23100598
