@@ -54,17 +54,29 @@
             font-weight: bold;
             white-space: nowrap;
         }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Background Video -->
+
     <video autoplay muted loop class="video-bg">
         <source src="{% static 'backgrounds/shelter.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Header with Emergency Hotline -->
+
     <header class="bg-danger text-white py-3 mb-4">
         <div class="container navbar-header-custom">
             <img src="{% static 'images/nadma_logo.png' %}" alt="NADMA Logo">
@@ -94,6 +106,11 @@
         <div class="mt-4 text-center">
             <a href="{% url 'home' %}" class="btn btn-outline-primary">← Back to Home</a>
         </div>
+    </div>
+
+
+    <div class="footer">
+        © 2025 NADMA, Lee Kei Kar, 23100598
     </div>
 
 </body>

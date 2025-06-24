@@ -2,12 +2,10 @@
 {% load static %}
 {% block content %}
 
-
 <video autoplay muted loop class="video-bg">
     <source src="{% static 'backgrounds/aidreq.mp4' %}" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-
 
 <div class="video-overlay"></div>
 
@@ -45,11 +43,23 @@
     label, input, textarea {
         color: black !important;
     }
+
     h1 {
         color: black !important;
     }
-</style>
 
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9rem;
+        z-index: 10;
+    }
+</style>
 
 <div class="container">
     <h1 class="mb-4">Submit Aid Request</h1>
@@ -74,6 +84,11 @@
             <button type="submit" class="btn btn-success px-4">Submit Request</button>
         </div>
     </form>
+</div>
+
+<!-- Transparent Centered White Footer -->
+<div class="footer">
+    © 2025 NADMA, Lee Kei Kar, 23100598
 </div>
 
 {% endblock %}
