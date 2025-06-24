@@ -9,8 +9,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
 
         .card {
@@ -59,6 +60,16 @@
             border: none;
             padding: 0.75rem 0;
         }
+
+        .footer {
+            margin-top: auto;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            background-color: transparent;
+            color: black;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +92,11 @@
                 <a class="btn btn-clean" href="{% url 'volunteer_logout' %}">Logout</a>
             </li>
         </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 NADMA, Lee Kei Kar, 23100598
     </div>
 
 </body>
